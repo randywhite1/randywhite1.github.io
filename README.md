@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+## Day 1 of 100 days of code challenge
 
-You can use the [editor on GitHub](https://github.com/randywhite1/randywhite1.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is not only day 1 of the 100 days of code challenge, but my first day of using Github and first blog post!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Math challenge
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This is a coding challenge, calling for taking two number arguements - a/b - and adding all numbers inbetween them including themselves. If a = b, then simply return either or; the function should as well account for negative numbers. I did this in Python:
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+def sum_nums(a , b):
+    if a == b:
+        return a
+    if a < b:
+         while a != b:   
+            for x in range(a+1,b+1):
+                a+=x
+            return a
+    if a > b:
+        while b != a:
+            for x in range(b+1,a+1):
+                b+=x
+            return b
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+I ran the code with both positive and negative integers, and it seems to compute correctly. I am decently sure this may be cleaned up a bit, and the syntax seems a bit barbaric, but it works!
+Now, to figure out how to do multiple days and become familiar with Github...
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/randywhite1/randywhite1.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Until next time!
