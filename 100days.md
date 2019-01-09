@@ -1,4 +1,60 @@
+## Multiple days of code combined into Day 3
+I have been busy, forgive me. I did some things on the side, some just practicing with random stuff.
+Code I will present is a little collection of challenges from the Think Python! book with math. And
+I learned how to do proper doc strings! It's not much but... it's code :)
 
+```markdown
+import math
+
+
+def vol_sphere(r):
+    '''
+    Calculates volume of a sphere given radius
+
+    That's it, really.
+    '''
+    q = math.pi
+    vol = 4/3*q*(r**3)
+    return vol
+
+
+def book_wholesale(amount):
+    '''
+    Calculates cost of books to wholesaler
+
+    To ship 1, cost is $3, $.75 per after
+    Base cost is 40% of 24.95, simply enter the total books
+    '''
+
+    ship1 = 3
+    ship2 = .75
+    cost = 24.95 - (24.95*.40)
+    amount -= 1
+    total = 3 + (ship2 * amount)
+    total += round(cost * (amount + 1),2)
+    return total
+
+
+def newton_root(a):
+    '''
+    Uses Newton's root formula
+
+    It states that when you wish to compute the square root of
+    any number, a, you can take a guess x and insert it into:
+    y = (x + a/x) / 2
+    then replace x with y, and continue until x = y and you'll have the root.
+    I started with dividing a by 2, and using that as the guess to save time.
+    Computes rather well, actually.
+    '''
+    x = a/2
+    while True:
+        y = (x + a/x) / 2
+        if y == x:
+            return y
+            False
+        print(y)
+        x = y
+```
 ## Day 2 of 100 of days of code challenge
 
 This is part of a small game I've been working on the side for a while. 
